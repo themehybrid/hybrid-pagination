@@ -1,6 +1,6 @@
 # Hybrid\\Pagination
 
-Hybrid Pagination is an add-on package for the [Hybrid Core](https://github.com/justintadlock/hybrid-core) WordPress framework.
+Hybrid Pagination is an add-on package for the [Hybrid Core](https://github.com/themehybrid/hybrid-core) WordPress framework.
 This is a fork of the core WordPress `paginate_links()` function to give theme authors full control over the output of their pagination.
 Unfortunately, core doesn't give theme authors much flexibility for altering the markup and classes.
 This class is meant to solve this issue.  It also standardizes the pagination used for posts, singular (multi-page) posts, and comments.
@@ -26,7 +26,7 @@ cd path/to/wp-content/themes/<your-theme-name>
 Then, use Composer to install the package.
 
 ```bash
-composer require justintadlock/hybrid-pagination
+composer require themehybrid/hybrid-pagination
 ```
 
 ### Register the service provider
@@ -47,4 +47,4 @@ $app->provider( \Hybrid\Attr\PaginationServiceProvider::class );
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2021 &copy; [Justin Tadlock](http://justintadlock.com).
+2008&thinsp;&ndash;&thinsp;2021 &copy; [Justin Tadlock](https://themehybrid.com).

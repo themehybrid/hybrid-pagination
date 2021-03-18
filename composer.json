@@ -1,8 +1,8 @@
 {
-	"name"        : "justintadlock/hybrid-pagination",
-	"description" : "Additional theme specific features for the Hybrid Core framework.",
+	"name"        : "themehybrid/hybrid-pagination",
+	"description" : "Enhanced pagination addon for the Hybrid Core framework.",
 	"keywords"    : [ "wordpress" ],
-	"homepage"    : "https://github.com/justintadlock/hybrid-pagination",
+	"homepage"    : "https://github.com/themehybrid/hybrid-pagination",
 	"license"     : "GPL-2.0-or-later",
 	"authors"     : [
 		{
@@ -13,8 +13,8 @@
 		}
 	],
 	"support"     : {
-		"issues" : "https://github.com/justintadlock/hybrid-pagination/issues",
-		"forum"  : "https://themehybrid.com/board/topics"
+		"issues" : "https://github.com/themehybrid/hybrid-pagination/issues",
+		"forum"  : "https://themehybrid.com/board/forums/hybrid-core"
 	},
 	"autoload"    : {
 		"psr-4" : {
