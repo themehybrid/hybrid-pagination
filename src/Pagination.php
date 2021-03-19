@@ -10,7 +10,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -22,7 +22,7 @@ use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
 /**
  * Pagination class.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  */
 class Pagination implements PaginationContract {
@@ -31,7 +31,7 @@ class Pagination implements PaginationContract {
 	 * The type of pagination to output.  `posts`, `comments`, and `singular`
 	 * are the default types that are handled.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @var    string
 	 */
@@ -40,7 +40,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * An array of the pagination items.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @var    array
 	 */
@@ -49,7 +49,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * The total number of pages.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @var    int
 	 */
@@ -58,7 +58,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * The current page being viewed.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @var    int
 	 */
@@ -67,7 +67,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * The number of items to show on the ends.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @var    int
 	 */
@@ -76,7 +76,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * The number of items to show in the middle.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @var    int
 	 */
@@ -85,7 +85,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Helper property for tracking the URL parts of the current page.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @var    array
 	 */
@@ -94,7 +94,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Helper for keeping track of whether to show dots instead of a number.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @var    bool
 	 */
@@ -103,7 +103,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Create a new pagination object.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @param  string  $context
 	 * @param  array   $args
@@ -216,7 +216,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Returns custom arguments for normal, posts pagination.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @global object  $wp_query
 	 * @global object  $wp_rewrite
@@ -253,7 +253,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Returns custom arguments for singular post pagination.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @global int     $page
 	 * @global int     $numpages
@@ -284,7 +284,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Returns custom arguments for comments pagination.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @global object  $wp_rewrite
 	 * @return array
@@ -313,7 +313,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Outputs the pagination output.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -325,7 +325,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Returns the pagination output.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -377,7 +377,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Builds the pagination `$items` array.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return PaginationContract
 	 */
@@ -400,7 +400,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Format an item's HTML output.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access private
 	 * @param  array   $item
 	 * @return string
@@ -451,7 +451,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Builds the previous item.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @return void
 	 */
@@ -470,7 +470,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Builds the next item.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @return void
 	 */
@@ -489,7 +489,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Builds the numeric page link, current item, and dots item.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @return void
 	 */
@@ -534,7 +534,7 @@ class Pagination implements PaginationContract {
 	/**
 	 * Builds and formats a page link URL.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @param  string    $format
 	 * @param  int       $number

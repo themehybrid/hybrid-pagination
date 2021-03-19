@@ -21,10 +21,14 @@
 			"Hybrid\\Pagination\\" : "src/"
 		},
 		"files" : [
-			"src/bootstrap-pagination.php"
+			"src/functions-pagination.php"
 		]
 	},
 	"require"     : {
-		"php" : ">=5.6"
+		"php" : ">=5.6",
+		"themehybrid/hybrid-contracts" : "^1.0.0"
+	},
+	"suggest"     : {
+		"themehybrid/hybrid-tools" : "Needed if registering the service provider with Hybrid Core."
 	}
 }
