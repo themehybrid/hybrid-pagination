@@ -21,7 +21,7 @@
 			"Hybrid\\Pagination\\" : "src/"
 		},
 		"files" : [
-			"src/bootstrap-pagination.php"
+			"src/functions-pagination.php"
 		]
 	},
 	"require"     : {
