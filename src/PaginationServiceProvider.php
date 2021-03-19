@@ -9,7 +9,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -22,7 +22,7 @@ use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
 /**
  * Attr provider class.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  */
 class PaginationServiceProvider extends ServiceProvider {
@@ -30,7 +30,7 @@ class PaginationServiceProvider extends ServiceProvider {
 	/**
 	 * Binds the implementation of the attributes contract to the container.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return void
 	 */

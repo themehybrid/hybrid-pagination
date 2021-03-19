@@ -6,7 +6,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -19,7 +19,7 @@ use Hybrid\Support\Contracts\Displayable;
 /**
  * Pagination interface.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  */
 interface Pagination extends Renderable, Displayable {
@@ -27,7 +27,7 @@ interface Pagination extends Renderable, Displayable {
 	/**
 	 * Builds the pagination.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return Pagination
 	 */
