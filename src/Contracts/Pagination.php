@@ -13,8 +13,8 @@
 
 namespace Hybrid\Pagination\Contracts;
 
-use Hybrid\Support\Contracts\Renderable;
-use Hybrid\Support\Contracts\Displayable;
+use Hybrid\Contracts\Renderable;
+use Hybrid\Contracts\Displayable;
 
 /**
  * Pagination interface.

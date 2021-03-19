@@ -16,7 +16,7 @@
 
 namespace Hybrid\Pagination;
 
-use Hybrid\Support\Tools\ServiceProvider;
+use Hybrid\Tools\ServiceProvider;
 use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
 
 /**
