@@ -37,7 +37,7 @@ $themeslug = new \Hybrid\Core\Application();
 After that point, you can register the service provider:
 
 ```php
-$themeslug->provider( \Hybrid\Attr\PaginationServiceProvider::class );
+$themeslug->provider( \Hybrid\Pagination\PaginationServiceProvider::class );
 ```
 
 ## Copyright and License
