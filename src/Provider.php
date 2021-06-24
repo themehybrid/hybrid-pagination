@@ -25,7 +25,7 @@ use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
  * @since  1.0.0
  * @access public
  */
-class PaginationServiceProvider extends ServiceProvider {
+class Provider extends ServiceProvider {
 
 	/**
 	 * Binds the implementation of the attributes contract to the container.
@@ -35,9 +35,6 @@ class PaginationServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-
 		$this->app->bind( PaginationContract::class, Pagination::class );
-
-		$this->app->alias( PaginationContract::class, 'pagination' );
 	}
 }
