@@ -318,7 +318,6 @@ class Pagination implements PaginationContract {
 	 * @return void
 	 */
 	public function display() {
-
 		echo $this->render();
 	}
 
@@ -349,7 +348,6 @@ class Pagination implements PaginationContract {
 			// Loop through each of the items and format each into
 			// an HTML string.
 			foreach ( $this->items as $item ) {
-
 				$list .= $this->formatItem( $item );
 			}
 
