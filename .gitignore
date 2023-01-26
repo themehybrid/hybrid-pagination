@@ -24,4 +24,4 @@ node_modules/
 
 composer.lock
 /vendor
-.idea
+/.idea
