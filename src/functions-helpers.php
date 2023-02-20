@@ -15,7 +15,7 @@
 namespace Hybrid\Pagination;
 
 use Hybrid\Pagination\Contracts\Pagination;
-use Hybrid\Proxies\App;
+use Hybrid\App;
 
 if ( ! function_exists( __NAMESPACE__ . '\\pagination' ) ) {
 	/**
