@@ -2,6 +2,15 @@
 
 You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-pagination/commits/master) for the latest release.
 
+## [1.0.1] - 2023-02-20
+
+### Updated
+
+- Update copyright year
+- Update copyright author
+- Bump php version from 5.6 -> 7.4
+- Improve compatibility with Hybrid Core v7
+
 ## [1.0.0] - 2021-08-01
 
 ### Added
