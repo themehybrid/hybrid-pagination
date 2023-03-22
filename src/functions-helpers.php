@@ -4,17 +4,18 @@
  *
  * Helper functions and template tags related to pagination.
  *
- * @package   HybridCore
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
- * @link      https://themehybrid.com/hybrid-core
+ * @package   HybridPagination
+ * @link      https://github.com/themehybrid/hybrid-pagination
+ *
+ * @author    Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Pagination;
 
 use Hybrid\Pagination\Contracts\Pagination;
-use Hybrid\Proxies\App;
+use Hybrid\App;
 
 if ( ! function_exists( __NAMESPACE__ . '\\pagination' ) ) {
 	/**
