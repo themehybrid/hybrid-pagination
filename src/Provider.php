@@ -24,18 +24,21 @@ use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
  * Attr provider class.
  *
  * @since  1.0.0
+ *
  * @access public
  */
 class Provider extends ServiceProvider {
 
-	/**
-	 * Binds the implementation of the attributes contract to the container.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return void
-	 */
-	public function register() {
-		$this->app->bind( PaginationContract::class, Pagination::class );
-	}
+    /**
+     * Binds the implementation of the attributes contract to the container.
+     *
+     * @since  1.0.0
+     * @return void
+     *
+     * @access public
+     */
+    public function register() {
+        $this->app->bind( PaginationContract::class, Pagination::class );
+    }
+
 }

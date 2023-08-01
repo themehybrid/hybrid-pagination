@@ -1,10 +1,11 @@
 {
-	"name"        : "themehybrid/hybrid-pagination",
-	"description" : "Enhanced pagination add-on for the Hybrid Core framework.",
-	"keywords"    : [ "wordpress" ],
-	"homepage"    : "https://github.com/themehybrid/hybrid-pagination",
-	"license"     : "GPL-2.0-or-later",
-	"authors"     : [
+	"name": "themehybrid/hybrid-pagination",
+	"description": "Enhanced pagination add-on for the Hybrid Core framework.",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress"
+	],
+	"authors": [
 		{
 			"name": "Theme Hybrid",
 			"email": "themehybrid@gmail.com",
@@ -12,21 +13,22 @@
 			"role": "Developer"
 		}
 	],
-	"support"     : {
-		"issues" : "https://github.com/themehybrid/hybrid-pagination/issues",
-		"forum"  : "https://themehybrid.com/board/forums/hybrid-core"
+	"homepage": "https://github.com/themehybrid/hybrid-pagination",
+	"support": {
+		"issues": "https://github.com/themehybrid/hybrid-pagination/issues",
+		"forum": "https://themehybrid.com/board/forums/hybrid-core"
 	},
-	"autoload"    : {
-		"psr-4" : {
-			"Hybrid\\Pagination\\" : "src/"
+	"require": {
+		"php": ">=7.4",
+		"themehybrid/hybrid-contracts": "^1.0 || ^2.0",
+		"themehybrid/hybrid-core": "^6.0 || ^7.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Hybrid\\Pagination\\": "src/"
 		},
-		"files" : [
+		"files": [
 			"src/functions-helpers.php"
 		]
-	},
-	"require"     : {
-		"php"                          : ">=7.4",
-		"themehybrid/hybrid-core"      : "^6.0 || ^7.0",
-		"themehybrid/hybrid-contracts" : "^1.0 || ^2.0"
 	}
 }
