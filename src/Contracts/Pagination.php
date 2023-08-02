@@ -14,23 +14,26 @@
 
 namespace Hybrid\Pagination\Contracts;
 
-use Hybrid\Contracts\Renderable;
 use Hybrid\Contracts\Displayable;
+use Hybrid\Contracts\Renderable;
 
 /**
  * Pagination interface.
  *
  * @since  1.0.0
+ *
  * @access public
  */
 interface Pagination extends Renderable, Displayable {
 
-	/**
-	 * Builds the pagination.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return Pagination
-	 */
-	public function make();
+    /**
+     * Builds the pagination.
+     *
+     * @since  1.0.0
+     * @return \Hybrid\Pagination\Contracts\Pagination
+     *
+     * @access public
+     */
+    public function make();
+
 }
