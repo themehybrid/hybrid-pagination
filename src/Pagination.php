@@ -22,10 +22,6 @@ use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
 
 /**
  * Pagination class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class Pagination implements PaginationContract {
 
@@ -33,92 +29,65 @@ class Pagination implements PaginationContract {
      * The type of pagination to output.  `posts`, `comments`, and `singular`
      * are the default types that are handled.
      *
-     * @since  1.0.0
-     * @var    string
-     *
-     * @access protected
+     * @var string
      */
     protected $context = 'posts';
 
     /**
      * An array of the pagination items.
      *
-     * @since  1.0.0
-     * @var    array
-     *
-     * @access protected
+     * @var array
      */
     protected $items = [];
 
     /**
      * The total number of pages.
      *
-     * @since  1.0.0
-     * @var    int
-     *
-     * @access protected
+     * @var int
      */
     protected $total = 0;
 
     /**
      * The current page being viewed.
      *
-     * @since  1.0.0
-     * @var    int
-     *
-     * @access protected
+     * @var int
      */
     protected $current = 0;
 
     /**
      * The number of items to show on the ends.
      *
-     * @since  1.0.0
-     * @var    int
-     *
-     * @access protected
+     * @var int
      */
     protected $end_size = 0;
 
     /**
      * The number of items to show in the middle.
      *
-     * @since  1.0.0
-     * @var    int
-     *
-     * @access protected
+     * @var int
      */
     protected $mid_size = 0;
 
     /**
      * Helper property for tracking the URL parts of the current page.
      *
-     * @since  1.0.0
-     * @var    array
-     *
-     * @access protected
+     * @var array
      */
     protected $url_parts = [];
 
     /**
      * Helper for keeping track of whether to show dots instead of a number.
      *
-     * @since  1.0.0
-     * @var    bool
-     *
-     * @access protected
+     * @var bool
      */
     protected $dots = false;
 
     /**
      * Create a new pagination object.
      *
-     * @since  1.0.0
-     * @param  string $context
-     * @param  array  $args
+     * @param string $context
+     * @param array  $args
      * @return void
-     *
-     * @access public
      */
     public function __construct( $context = 'posts', $args = [] ) {
 
@@ -219,7 +188,7 @@ class Pagination implements PaginationContract {
         $this->mid_size = absint( $this->args['mid_size'] );
 
         // The end size must be at least 1.
-        if ( $this->end_size < 1 ) {
+        if ( 1 > $this->end_size ) {
             $this->end_size = 1;
         }
     }
@@ -227,12 +196,9 @@ class Pagination implements PaginationContract {
     /**
      * Returns custom arguments for normal, posts pagination.
      *
-     * @since  1.0.0
      * @global object  $wp_query
      * @global object  $wp_rewrite
      * @return array
-     *
-     * @access protected
      */
     protected function postsArgs() {
         global $wp_query, $wp_rewrite;
@@ -267,14 +233,11 @@ class Pagination implements PaginationContract {
     /**
      * Returns custom arguments for singular post pagination.
      *
-     * @since  1.0.0
      * @global int     $page
      * @global int     $numpages
      * @global bool    $more
      * @global object  $wp_rewrite
      * @return array
-     *
-     * @access protected
      */
     protected function postArgs() {
         global $page, $numpages, $more, $wp_rewrite;
@@ -300,11 +263,8 @@ class Pagination implements PaginationContract {
     /**
      * Returns custom arguments for comments pagination.
      *
-     * @since  1.0.0
      * @global object  $wp_rewrite
      * @return array
-     *
-     * @access protected
      */
     protected function commentsArgs() {
         global $wp_rewrite;
@@ -330,10 +290,7 @@ class Pagination implements PaginationContract {
     /**
      * Outputs the pagination output.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access public
      */
     public function display() {
         echo $this->render();
@@ -342,10 +299,7 @@ class Pagination implements PaginationContract {
     /**
      * Returns the pagination output.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public function render() {
 
@@ -394,10 +348,7 @@ class Pagination implements PaginationContract {
     /**
      * Builds the pagination `$items` array.
      *
-     * @since  1.0.0
      * @return \Hybrid\Pagination\Contracts\Pagination
-     *
-     * @access public
      */
     public function make() {
 
@@ -418,11 +369,8 @@ class Pagination implements PaginationContract {
     /**
      * Format an item's HTML output.
      *
-     * @since  1.0.0
-     * @param  array $item
+     * @param array $item
      * @return string
-     *
-     * @access private
      */
     private function formatItem( $item ) {
 
@@ -467,10 +415,7 @@ class Pagination implements PaginationContract {
     /**
      * Builds the previous item.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access protected
      */
     protected function prevItem() {
 
@@ -488,10 +433,7 @@ class Pagination implements PaginationContract {
     /**
      * Builds the next item.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access protected
      */
     protected function nextItem() {
 
@@ -509,10 +451,7 @@ class Pagination implements PaginationContract {
     /**
      * Builds the numeric page link, current item, and dots item.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access protected
      */
     protected function pageItem( $n ) {
 
@@ -529,25 +468,25 @@ class Pagination implements PaginationContract {
 
             // If showing a linked number or dots.
         } elseif (
-                $this->args['show_all']
+            $this->args['show_all']
+            || (
+                $n <= $this->end_size
                 || (
-                    $n <= $this->end_size
-                    || (
-                        $this->current
-                        && $n >= $this->current - $this->mid_size
-                        && $n <= $this->current + $this->mid_size
-                    )
-                    || $n > $this->total - $this->end_size
+                    $this->current
+                    && $this->current - $this->mid_size <= $n
+                    && $this->current + $this->mid_size >= $n
                 )
-            ) {
+                || $this->total - $this->end_size < $n
+            )
+        ) {
 
-                $this->items[] = [
-                    'content' => $this->args['before_page_number'] . number_format_i18n( $n ) . $this->args['after_page_number'],
-                    'type'    => 'number',
-                    'url'     => $this->buildUrl( 1 === $n ? '' : $this->args['format'], $n ),
-                ];
+            $this->items[] = [
+                'content' => $this->args['before_page_number'] . number_format_i18n( $n ) . $this->args['after_page_number'],
+                'type'    => 'number',
+                'url'     => $this->buildUrl( 1 === $n ? '' : $this->args['format'], $n ),
+            ];
 
-                $this->dots = true;
+            $this->dots = true;
 
         } elseif ( $this->dots && ! $this->args['show_all'] ) {
 
@@ -563,12 +502,9 @@ class Pagination implements PaginationContract {
     /**
      * Builds and formats a page link URL.
      *
-     * @since  1.0.0
-     * @param  string $format
-     * @param  int    $number
+     * @param string $format
+     * @param int    $number
      * @return string
-     *
-     * @access protected
      */
     protected function buildUrl( $format, $number ) {
 
