@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pagination service provider.
  *
@@ -24,7 +25,6 @@ use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
  * Attr provider class.
  */
 class Provider extends ServiceProvider {
-
     /**
      * Binds the implementation of the attributes contract to the container.
      *
@@ -33,5 +33,4 @@ class Provider extends ServiceProvider {
     public function register() {
         $this->app->bind( PaginationContract::class, Pagination::class );
     }
-
 }

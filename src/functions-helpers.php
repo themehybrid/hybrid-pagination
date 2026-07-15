@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pagination functions.
  *
@@ -23,6 +24,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\pagination' ) ) {
      *
      * @param string $context
      * @param array  $args
+     *
      * @return \Hybrid\Pagination\Contracts\Pagination
      */
     function pagination( $context = 'posts', array $args = [] ) {
@@ -39,6 +41,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\display' ) ) {
      *
      * @param string $context
      * @param array  $args
+     *
      * @return void
      */
     function display( $context = 'posts', array $args = [] ) {
@@ -52,6 +55,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\render' ) ) {
      *
      * @param string $context
      * @param array  $args
+     *
      * @return string
      */
     function render( $context = 'posts', array $args = [] ) {

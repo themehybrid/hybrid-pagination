@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pagination interface.
  *
@@ -21,12 +22,10 @@ use Hybrid\Contracts\Renderable;
  * Pagination interface.
  */
 interface Pagination extends Displayable, Renderable {
-
     /**
      * Builds the pagination.
      *
      * @return \Hybrid\Pagination\Contracts\Pagination
      */
     public function make();
-
 }
