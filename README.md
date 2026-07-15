@@ -5,7 +5,7 @@ Hybrid Pagination is a fork of the core WordPress `paginate_links()` function to
 ## Requirements
 
 * WordPress 7.0+.
-* PHP 7.4+ (preferably 8+).
+* PHP 8.2+.
 * [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
 ## Copyright and License
