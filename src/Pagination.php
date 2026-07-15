@@ -40,6 +40,13 @@ class Pagination implements PaginationContract {
      */
     protected $items = [];
 
+	/**
+     * Pagination arguments.
+     *
+     * @var array
+     */
+    protected $args = [];
+
     /**
      * The total number of pages.
      *
