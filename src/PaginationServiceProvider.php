@@ -22,11 +22,11 @@ use Hybrid\Core\ServiceProvider;
 use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
 
 /**
- * Attr provider class.
+ * Pagination provider class.
  */
-class Provider extends ServiceProvider {
+class PaginationServiceProvider extends ServiceProvider {
     /**
-     * Binds the implementation of the attributes contract to the container.
+     * Binds the implementation of the pagination contract to the container.
      *
      * @return void
      */
