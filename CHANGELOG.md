@@ -2,6 +2,12 @@
 
 You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-pagination/commits/master) for the latest release.
 
+## [1.0.4.1] - 2026-07-20
+
+### Documentation
+
+- Corrected the service provider class name in the README.
+
 ##  [1.0.4] - 2026-07-15
 
 ### Added

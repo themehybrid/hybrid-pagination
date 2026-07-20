@@ -13,7 +13,7 @@ Hybrid Pagination is a fork of the core WordPress `paginate_links()` function to
 Register the service provider with your application:
 
 ```php
-$app->register( \Hybrid\Pagination\Provider::class );
+$app->register( \Hybrid\Pagination\PaginationServiceProvider::class );
 ```
 
 This binds `Hybrid\Pagination\Contracts\Pagination` to `Hybrid\Pagination\Pagination` in the
