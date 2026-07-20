@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pagination service provider.
  *
@@ -11,7 +12,7 @@
  * @link      https://github.com/themehybrid/hybrid-pagination
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2026, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -21,17 +22,15 @@ use Hybrid\Core\ServiceProvider;
 use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
 
 /**
- * Attr provider class.
+ * Pagination provider class.
  */
-class Provider extends ServiceProvider {
-
+class PaginationServiceProvider extends ServiceProvider {
     /**
-     * Binds the implementation of the attributes contract to the container.
+     * Binds the implementation of the pagination contract to the container.
      *
      * @return void
      */
     public function register() {
         $this->app->bind( PaginationContract::class, Pagination::class );
     }
-
 }

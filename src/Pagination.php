@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pagination class.
  *
@@ -12,7 +13,7 @@
  * @link      https://github.com/themehybrid/hybrid-pagination
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2026, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -24,7 +25,6 @@ use Hybrid\Pagination\Contracts\Pagination as PaginationContract;
  * Pagination class.
  */
 class Pagination implements PaginationContract {
-
     /**
      * The type of pagination to output.  `posts`, `comments`, and `singular`
      * are the default types that are handled.
@@ -39,6 +39,13 @@ class Pagination implements PaginationContract {
      * @var array
      */
     protected $items = [];
+
+    /**
+     * Pagination arguments.
+     *
+     * @var array
+     */
+    protected $args = [];
 
     /**
      * The total number of pages.
@@ -87,6 +94,7 @@ class Pagination implements PaginationContract {
      *
      * @param string $context
      * @param array  $args
+     *
      * @return void
      */
     public function __construct( $context = 'posts', $args = [] ) {
@@ -198,6 +206,7 @@ class Pagination implements PaginationContract {
      *
      * @global object  $wp_query
      * @global object  $wp_rewrite
+     *
      * @return array
      */
     protected function postsArgs() {
@@ -237,6 +246,7 @@ class Pagination implements PaginationContract {
      * @global int     $numpages
      * @global bool    $more
      * @global object  $wp_rewrite
+     *
      * @return array
      */
     protected function postArgs() {
@@ -264,6 +274,7 @@ class Pagination implements PaginationContract {
      * Returns custom arguments for comments pagination.
      *
      * @global object  $wp_rewrite
+     *
      * @return array
      */
     protected function commentsArgs() {
@@ -370,6 +381,7 @@ class Pagination implements PaginationContract {
      * Format an item's HTML output.
      *
      * @param array $item
+     *
      * @return string
      */
     private function formatItem( $item ) {
@@ -504,6 +516,7 @@ class Pagination implements PaginationContract {
      *
      * @param string $format
      * @param int    $number
+     *
      * @return string
      */
     protected function buildUrl( $format, $number ) {
@@ -522,5 +535,4 @@ class Pagination implements PaginationContract {
         // Applies the core WP `paginate_links` filter hook.
         return apply_filters( 'paginate_links', $link );
     }
-
 }
